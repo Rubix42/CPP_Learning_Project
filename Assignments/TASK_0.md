@@ -5,20 +5,34 @@
 Compilez et lancez le programme.
 
 Allez dans le fichier `tower_sim.cpp` et recherchez la fonction responsable de gérer les inputs du programme.
+Fonction : create_keystrokes
 Sur quelle touche faut-il appuyer pour ajouter un avion ?
+Ajouter un avion : C
 Comment faire pour quitter le programme ?
+Quitter le programme : X/Q
 A quoi sert la touche 'F' ?
+F : Mettre en full screen
 
 Ajoutez un avion à la simulation et attendez.
 Que est le comportement de l'avion ?
+L'avion atterit, attend quelques temps puis repart
 Quelles informations s'affichent dans la console ?
+La console affiche lorsque l'avion se pose, qu'il attend/a fini d'attendre et quand il décole.
 
 Ajoutez maintenant quatre avions d'un coup dans la simulation.
 Que fait chacun des avions ?
+3 avions se posent sur la station et un tourne autour en attendant son tour
 
 ## Analyse du code
 
 Listez les classes du programme à la racine du dossier src/.
+AirCraft : Représente un avion
+AirPort : Représente un aéroport
+AirPortType : Représente les types d'aéroport
+Terminal : Représente un point d'atterissage de la tour
+Tower : Représente une tour de contrôle
+TowerSimulation : Représente un environnement capable de simuler l'activité d'une tour de contrôle
+Waypoint : Représente un point d'atterrissage pour un avion
 Pour chacune d'entre elle, expliquez ce qu'elle représente et son rôle dans le programme.
 
 Pour les classes `Tower`, `Aircaft`, `Airport` et `Terminal`, listez leurs fonctions-membre publiques et expliquez précisément à quoi elles servent.
