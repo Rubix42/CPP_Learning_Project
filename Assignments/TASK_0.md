@@ -75,13 +75,17 @@ Le Concorde est censé pouvoir voler plus vite que les autres avions.
 Modifiez le programme pour tenir compte de cela.
 
 2) Identifiez quelle variable contrôle le framerate de la simulation.
+La variable DEFAULT_TICKS_PER_SEC
 Ajoutez deux nouveaux inputs au programme permettant d'augmenter ou de diminuer cette valeur.
 Essayez maintenant de mettre en pause le programme en manipulant ce framerate. Que se passe-t-il ? Fixez le problème.
+Le programme plante si lorsque le framerate arrive a 0
 
 3) Identifiez quelle variable contrôle le temps de débarquement des avions et doublez-le.
+C'est SERVICE_CYCLES
 
 4) Lorsqu'un avion décolle, celui-ci n'est pas retiré du programme.
 Faites en sorte qu'il le soit.
+//TROUVER ON QU ON VA AVEC UN BREAK POINT
 
 5) Lorsqu'un objet de type `Displayable` est créé, il faut ajouter celui-ci manuellement dans la liste des objets à afficher.
 Il faut également penser à le supprimer de cette liste avant de le détruire.

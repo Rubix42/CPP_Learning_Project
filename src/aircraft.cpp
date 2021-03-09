@@ -63,6 +63,13 @@ void Aircraft::operate_landing_gear()
         if (ground_before && !ground_after)
         {
             std::cout << flight_number << " lift off" << std::endl;
+            /*
+            auto truc  = std::find(GL::display_queue.begin(),
+                GL::display_queue.end(),
+                this);
+            GL::display_queue.erase(truc);
+            GL::move_queue.erase(this);
+            */
         }
         else if (!ground_before && ground_after)
         {

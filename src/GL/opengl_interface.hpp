@@ -29,6 +29,7 @@ inline std::unordered_map<char, KeyStroke> keystrokes;
 void handle_error(const std::string& prefix, const GLenum err = glGetError());
 void keyboard(unsigned char key, int, int);
 void toggle_fullscreen();
+void change_tick_speed(int i);
 void change_zoom(const float factor);
 void init_gl(int argc, char** argv, const char* title);
 void loop();
