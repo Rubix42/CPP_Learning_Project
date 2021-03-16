@@ -77,13 +77,8 @@ Modifiez le programme pour tenir compte de cela.
 2) Identifiez quelle variable contrôle le framerate de la simulation.
 La variable DEFAULT_TICKS_PER_SEC
 Ajoutez deux nouveaux inputs au programme permettant d'augmenter ou de diminuer cette valeur.
-<<<<<<< HEAD
 Essayez maintenant de mettre en pause le programme en manipulant ce framerate. Que se passe-t-il ? Fixez le problème.
 Le programme plante si lorsque le framerate arrive a 0
-=======
-Essayez maintenant de mettre en pause le programme en manipulant ce framerate. Que se passe-t-il ?\
-Ajoutez une nouvelle fonctionnalité au programme pour mettre le programme en pause, et qui ne passe pas par le framerate.
->>>>>>> upstream/master
 
 3) Identifiez quelle variable contrôle le temps de débarquement des avions et doublez-le.
 C'est SERVICE_CYCLES
@@ -94,13 +89,8 @@ Faites en sorte qu'il le soit.
 
 5) Lorsqu'un objet de type `Displayable` est créé, il faut ajouter celui-ci manuellement dans la liste des objets à afficher.
 Il faut également penser à le supprimer de cette liste avant de le détruire.
-<<<<<<< HEAD
-Que pourriez-vous faire afin que l'ajout et la suppression de la liste soit "automatiquement gérée" lorsqu'un `Displayable` est créé ou détruit ?
-Faites de même pour `DynamicObject`.
-=======
 Faites en sorte que l'ajout et la suppression de `display_queue` soit "automatiquement gérée" lorsqu'un `Displayable` est créé ou détruit.
 Pourquoi n'est-il pas spécialement pertinent d'en faire de même pour `DynamicObject` ?
->>>>>>> upstream/master
 
 6) La tour de contrôle a besoin de stocker pour tout `Aircraft` le `Terminal` qui lui est actuellement attribué, afin de pouvoir le libérer une fois que l'avion décolle.
 Cette information est actuellement enregistrée dans un `std::vector<std::pair<const Aircraft*, size_t>>` (size_t représentant l'indice du terminal).

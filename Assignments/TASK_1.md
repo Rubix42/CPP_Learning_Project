@@ -39,14 +39,10 @@ La fonction timer
 Tower et Terminal, move_queue, display_queue
 
 3. Comment fait-on pour supprimer la référence sur un avion qui va être détruit dans ces structures ?
-<<<<<<< HEAD
 Dans tower et terminal ils sont plus dedans. Displayable s'auto retire
 
 4. Pourquoi ne pouvez-vous pas appliquer la même chose sur votre conteneur d'avions ?
 Pour réutiliser la bibliothèque GL
-=======
-4. Pourquoi n'est-il pas très judicieux d'essayer d'appliquer la même chose pour votre `AircraftManager` ?
->>>>>>> upstream/master
 
 Pour simplifier le problème, vous allez déplacer l'ownership des avions dans la classe `AircraftManager`.
 Vous allez également faire en sorte que ce soit cette classe qui s'occupe de déplacer les avions, et non plus la fonction `timer`.

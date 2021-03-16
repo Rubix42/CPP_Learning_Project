@@ -23,6 +23,7 @@ private:
 
     void create_keystrokes();
     void display_help() const;
+    void display_stats(int airline);
 
     void init_airport();
 
