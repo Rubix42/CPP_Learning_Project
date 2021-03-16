@@ -6,7 +6,7 @@ La création des avions est aujourd'hui gérée par les fonctions `TowerSimulati
 Chaque avion créé est ensuite placé dans les files `GL::display_queue` et `GL::move_queue`.
 
 Si à un moment quelconque du programme, vous souhaitiez accéder à l'avion ayant le numéro de vol "AF1250", que devriez-vous faire ?
-
+Il faudrait le chercher dans la display queue ou dans la move_queue
 ---
 
 ## Objectif 1 - Référencement des avions
@@ -20,6 +20,9 @@ Vous avez 2 choix possibles :
 - donner ce rôle à une classe existante.
 
 Réfléchissez aux pour et contre de chacune de ces options.
+Donner ce role a une classe existante donnera trop de responsabilité a une seul classe.
+
+>>> Dépend du temps gagné par l'implémentation
 
 Pour le restant de l'exercice, vous partirez sur le premier choix.
 
@@ -30,9 +33,16 @@ Il serait donc bon de savoir qui est censé détruire les avions du programme, a
 
 Répondez aux questions suivantes :
 1. Qui est responsable de détruire les avions du programme ? (si vous ne trouvez pas, faites/continuez la question 4 dans TASK_0)
+La fonction timer
+
 2. Quelles autres structures contiennent une référence sur un avion au moment où il doit être détruit ?
+Tower et Terminal, move_queue, display_queue
+
 3. Comment fait-on pour supprimer la référence sur un avion qui va être détruit dans ces structures ?
+Dans tower et terminal ils sont plus dedans. Displayable s'auto retire
+
 4. Pourquoi ne pouvez-vous pas appliquer la même chose sur votre conteneur d'avions ?
+Pour réutiliser la bibliothèque GL
 
 Pour simplifier le problème, vous allez déplacer l'ownership des avions dans la classe `AircraftManager`.
 Vous allez également faire en sorte que ce soit cette classe qui s'occupe de déplacer les avions, et non plus la fonction `timer`.
